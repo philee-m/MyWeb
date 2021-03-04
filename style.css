@@ -1,3 +1,8 @@
+:root {
+  --inputpadding: 7px 20px;
+  --orangeborder: 1px solid orangered;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -64,11 +69,21 @@ header {
   text-align: center;
 }
 
+#project__title {
+  text-align: center;
+  padding: 40px;
+  background-color: #8080804b;
+}
+
 main {
   display: grid;
   grid-template-columns: 1fr repeat(12, minmax(auto, 60px)) 1fr;
   gap: 40px;
   padding: 60px 0;
+  background-color: #8080804b;
+}
+.active {
+  color: white;
 }
 .text--medium {
   font-family: monospace;
@@ -85,10 +100,8 @@ main {
 }
 .card {
   grid-column-end: span 4;
-  display: flex;
-  flex-direction: column;
-  background-color: #39393b;
   cursor: pointer;
+  background-color: gray;
   transition: all 0.3s ease 0s;
 }
 .card:hover {
@@ -96,7 +109,7 @@ main {
 }
 .card__image--container {
   width: 100%;
-  padding-top: 56.25%;
+  padding-top: 67%;
   overflow: hidden;
   position: relative;
 }
@@ -109,24 +122,78 @@ main {
   transform: translate(-50%, -50%);
 }
 
-.card__content {
-  padding: 10px; /*20px*/
+/*---------------- start of contact page styles -----------------*/
+
+#contact__header {
+  height: 70vh;
+  background-image: url(images/345604.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat; 
+  display: grid;
+  grid-template-rows: 1fr 3fr;
 }
-.card__title {
-  margin-bottom: 10px; /*20px*/
+#contact__header .message {
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+}
+.message h1 {
+  color: #FFFFFF;
+  font-size: 50px;
+  line-height: 66px;
+  font-weight: bold;
 }
 
-.card__info {
+.connect {
   display: flex;
-  /* align-self: flex-end; */
+  flex-direction: column;
   align-items: center;
+  padding: 30px 10px;
+  margin-top: 40px;
 }
-.card__price {
-  margin-left: auto;
-  padding: 5px 20px;
-  background-color: #303032;
-  border-radius: 20px;
+.connect form{
+  width: 90%;
+  padding: 10px 30px;
+  border: var(--orangeborder);
+  margin: auto;
 }
+
+.connect form button {
+  width: 200px;
+  padding: 10px;
+  border: var(--orangeborder);
+
+}
+.form_control {
+  margin-bottom: 20px;
+}
+.form_control label {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.form_control input[type=text] {
+  outline: none;
+  border: var(--orangeborder);
+  min-width: 40%;
+  padding: var(--inputpadding);
+}
+.form_control input[type=email] {
+  outline: none;
+  border: var(--orangeborder);
+  min-width: 50%;
+  padding: var(--inputpadding);
+}
+.form_control textarea {
+  outline: none;
+  border: var(--orangeborder);
+  min-width: 60%;
+  padding: var(--inputpadding);
+}
+
+
+/*---------------- end of contact page styles -----------------*/
+
 footer {
   height: 50vh;
   display: flex;
@@ -137,9 +204,26 @@ footer {
 }
 footer h1 {
   color: white;
-  font-size: 3rem;
-  font-family: monospace;
-  font-weight: 500;
+  font-size: 29px;
+  font-weight: 400;
+}
+
+footer h5 {
+  color: #ffffff6e;
+}
+footer .social-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+footer .social-links li {
+  color: #ffffff6e;
+  font-size: 23px;
+  padding: 10px 20px;
+  
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
 }
 
 .footer__nav__links {
@@ -154,6 +238,10 @@ footer h1 {
   transition: all 0.3s ease 0s;
   cursor: pointer;
 }
+.footer__nav__links li:hover {
+  background-color: orangered;
+  color: #FFFFFF;
+}
 
 @media only screen and (max-width: 1000px) {
   .card {
@@ -162,15 +250,25 @@ footer h1 {
 }
 
 @media only screen and (max-width: 700px) {
+  header nav {
+    display: none;
+  }
   main {
     gap: 20px;
   }
   .card {
     grid-column-end: span 12;
   }
+  .message h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
 @media only screen and (max-width: 500px) {
+  header nav {
+    display: none;
+  }
   main {
     grid-template-columns: 10px repeat(6, 1fr) 10px;
     gap: 10px;
@@ -182,5 +280,9 @@ footer h1 {
   }
   .card {
     grid-column-end: span 6;
+  }
+  .message h1 {
+    font-size: 20px;
+    line-height: 25px;
   }
 }
