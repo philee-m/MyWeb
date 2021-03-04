@@ -82,6 +82,7 @@ main {
   padding: 60px 0;
   background-color: #8080804b;
 }
+
 .active {
   color: white;
 }
@@ -101,7 +102,7 @@ main {
 .card {
   grid-column-end: span 4;
   cursor: pointer;
-  background-color: gray;
+  background-color: #FFFFFF;
   transition: all 0.3s ease 0s;
 }
 .card:hover {
@@ -120,6 +121,14 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.card__content {
+  padding: 10px;  /*20px*/
+}
+.card__title {
+  margin-bottom: 10px;    /*20px*/
+  color: #000;
 }
 
 /*---------------- start of contact page styles -----------------*/
@@ -162,8 +171,15 @@ main {
 .connect form button {
   width: 200px;
   padding: 10px;
+  font-weight: bold;
   border: var(--orangeborder);
-
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  transition: all .3s ease 0s;
+}
+.connect form button:hover {
+  background-color: orangered;
+  color: white;
 }
 .form_control {
   margin-bottom: 20px;
