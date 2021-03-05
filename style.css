@@ -35,9 +35,12 @@ header {
 }
 .nav__links li {
   display: inline-block;
-  padding: 10px 20px;
   text-align: center;
   transition: all 0.3s ease 0s;
+}
+.nav__links li a {
+  display: block;
+  padding: 10px 20px;
 }
 
 .nav__links li:hover {
@@ -109,7 +112,7 @@ main {
 .card:hover {
   transform: translateY(-7px);
 }
-.card:hover .card__title{
+.card:hover .card__title {
   color: orangered;
   text-decoration: underline;
 }
@@ -158,16 +161,40 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   display: grid;
-  grid-template-rows: 1fr 3fr;
+  grid-template-rows: 1fr 1fr 1fr;
   background-color: rgb(148, 143, 143);
   background-blend-mode: multiply;
-  
 }
-#contact__header .message, #blog__header .message {
+#contact__header .message,
+#blog__header .message {
   display: flex;
   align-items: center;
   padding-left: 10%;
 }
+
+.signup__login {
+  width: 330px;
+}
+
+.signup__login li,.signup__login a {
+  font-weight: bold;
+  border: 1px solid orange !important;
+  color: #ffffff !important;
+}
+.signup__login li:hover{
+  background-color: orange !important;
+}
+.signup__login li:nth-child(2){
+  background-color: orange;
+}
+.signup__login li:nth-child(2):hover{
+  background-color: transparent !important;
+}
+.signup__login li:nth-child(2) a{
+  color: #ffffff !important;
+}
+
+
 .message h1 {
   color: #ffffff;
   font-size: 50px;
@@ -227,6 +254,33 @@ main {
   min-width: 60%;
   padding: var(--inputpadding);
 }
+.contact {
+  margin-bottom: auto;
+}
+.contact .address {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+.contact h3 {
+  text-align: center;
+}
+.contact h4 {
+  margin-bottom: 20px;
+}
+.contact .socials {
+  padding-left: 10px;
+}
+.contact .social-links {
+  list-style: none;
+}
+.contact .social-links li {
+  padding: 10px 5px;
+}
+.contact .location p {
+  padding: 10px 5px;
+}
 
 /*---------------- end of contact page styles -----------------*/
 
@@ -257,9 +311,7 @@ footer .social-links li {
   color: #ffffff6e;
   font-size: 23px;
   padding: 10px 20px;
-
   transition: all 0.3s ease 0s;
-  
 }
 footer .social-links li a {
   color: #ffffff6e;
@@ -268,19 +320,28 @@ footer .social-links li a {
 
 .footer__nav__links {
   list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .footer__nav__links li {
-  display: inline-block;
+  /* display: inline-block; */
   border: 1px solid orangered;
-  padding: 10px 20px;
   margin: 10px 20px;
   transition: all 0.3s ease 0s;
   cursor: pointer;
 }
 .footer__nav__links li:hover {
   background-color: orangered;
+}
+
+.footer__nav__links li:hover a {
   color: #ffffff;
+}
+.footer__nav__links li a {
+  display: block;
+  padding: 10px 20px;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -302,12 +363,13 @@ footer .social-links li a {
   main {
     gap: 20px;
   }
-  /* .card {
-    grid-column-end: span 12;
-  } */
+
   .message h1 {
     font-size: 30px;
     line-height: 40px;
+  }
+  #contact__header, #blog__header {
+    height: 50vh;
   }
   .menu-toggle {
     display: block;
@@ -332,15 +394,24 @@ footer .social-links li a {
   }
   nav.active {
     display: block;
-    background-color: #1b1a1a;
     width: 100%;
-  } 
+  }
+  
+  nav ul li {
+    position: relative;
+  }
+
+  nav ul {
+    position: absolute;
+    background-color: #1b1a1a;
+    width: 70%;
+  }
   .logo.active {
     display: none;
   }
-  nav.active ul{
+  nav.active ul {
     display: block;
-  } 
+  }
   nav.active .nav__links {
     display: flex;
     flex-direction: column;
@@ -355,6 +426,9 @@ footer .social-links li a {
     grid-template-columns: 10px repeat(6, 1fr) 10px;
     gap: 10px;
   }
+  #contact__header, #blog__header {
+    height: 40vh;
+  }
   .cards {
     grid-column: 2 / span 6;
     grid-template-columns: repeat(6, 1fr);
@@ -367,4 +441,11 @@ footer .social-links li a {
     font-size: 20px;
     line-height: 25px;
   }
+  /* .contact .address {
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px ;
+  } */
 }
