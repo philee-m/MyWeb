@@ -24,7 +24,7 @@
     <title>Blog</title>
   </head>
   <body>
-    <section id="contact__header">
+    <section id="blog__header">
       <header>
         <a href="index.html"  class="logo">PHILWEB</a>
         <nav>
@@ -36,6 +36,7 @@
             <li><a href="contact.html">CONTACT</a></li>
           </ul>
         </nav>
+        <div class="menu-toggle"></div>
       </header>
       <div class="message">
         <h1>John Doe's blog</h1>
@@ -45,21 +46,21 @@
       <section class="cards">
         <div class="card">
           <div class="card__image--container">
-            <img src="images/pexels-pixabay-47319 2.png" alt="" srcset="" />
+            <img src="images/website.webp" alt="" srcset="" />
           </div>
           <div class="card__content">
             <p class="card__title text--medium">
-              here is the title of an awesome course
+              importance of a website to a business
             </p>
           </div>
         </div>
         <div class="card">
           <div class="card__image--container">
-            <img src="images/pexels-fauxels-3184287 1.png" alt="" srcset="" />
+            <img src="images/businessgrowth.webp" alt="" srcset="" />
           </div>
           <div class="card__content">
             <p class="card__title text--medium">
-              here is the title of an awesome course
+              here are some tips for the growth of your firm
             </p>
           </div>
         </div>
@@ -73,7 +74,18 @@
           </div>
           <div class="card__content">
             <p class="card__title text--medium">
-              here is the title of an awesome course
+              African ladies are joining the tech career
+            </p>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card__image--container">
+            <img src="images/pexels-fauxels-3184291.jpg" alt="" srcset="" />
+          </div>
+          <div class="card__content">
+            <p class="card__title text--medium">
+              Reason why developers usually work in group
             </p>
           </div>
         </div>
@@ -87,17 +99,7 @@
           </div>
           <div class="card__content">
             <p class="card__title text--medium">
-              here is the title of an awesome course
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card__image--container">
-            <img src="images/pexels-fauxels-3184291.jpg" alt="" srcset="" />
-          </div>
-          <div class="card__content">
-            <p class="card__title text--medium">
-              here is the title of an awesome course
+              African ladies are joining the tech career
             </p>
           </div>
         </div>
@@ -107,7 +109,7 @@
           </div>
           <div class="card__content">
             <p class="card__title text--medium">
-              here is the title of an awesome course
+              Reason why developers usually work in group
             </p>
           </div>
         </div>
@@ -128,17 +130,27 @@
             class="fa fa-facebook"
             style="font-size: 20px; padding-right: 10px"
           ></i
-          >My_Facebook
+          ><a href="https://www.facebook.com/profile.php?id=100012202421493">philip muhire</a>
         </li>
         <li>
           <i
             class="fa fa-instagram"
             style="font-size: 20px; padding-right: 10px"
           ></i
-          >My_Instagram
+          ><a href="https://www.instagram.com/philee.m/" >philee.m</a>
         </li>
       </ul>
       <h5>&copy; 2020 Philippe Muhire. software developer</h5>
     </footer>
+    <script src="jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.menu-toggle').click(function(){
+          $('.menu-toggle').toggleClass('active')
+          $('nav').toggleClass('active')
+          $('.logo').toggleClass('active')
+        })
+      });
+    </script>
   </body>
 </html>

@@ -36,6 +36,7 @@
             <li><a href="#" class="active">CONTACT</a></li>
           </ul>
         </nav>
+        <div class="menu-toggle"></div>
       </header>
       <div class="message">
         <h1>
@@ -75,17 +76,27 @@
             class="fa fa-facebook"
             style="font-size: 20px; padding-right: 10px"
           ></i
-          >My_Facebook
+          ><a href="https://www.facebook.com/profile.php?id=100012202421493">philip muhire</a>
         </li>
         <li>
           <i
             class="fa fa-instagram"
             style="font-size: 20px; padding-right: 10px"
           ></i
-          >My_Instagram
+          ><a href="https://www.instagram.com/philee.m/" >philee.m</a>
         </li>
       </ul>
       <h5>&copy; 2020 Philippe Muhire. software developer</h5>
     </footer>
+    <script src="jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.menu-toggle').click(function(){
+          $('.menu-toggle').toggleClass('active')
+          $('nav').toggleClass('active')
+          $('.logo').toggleClass('active')
+        })
+      });
+    </script>
   </body>
 </html>

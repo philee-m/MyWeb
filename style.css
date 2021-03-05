@@ -22,7 +22,6 @@ a {
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 20px 10%;
 }
 .logo {
@@ -72,7 +71,7 @@ header {
 
 #project__title {
   text-align: center;
-  padding: 40px;
+  padding: 40px 40px 0;
   background-color: #8080804b;
 }
 
@@ -136,14 +135,29 @@ main {
 
 #contact__header {
   height: 70vh;
-  background-image: url(images/345604.jpg);
-  background-size: 100%;
+  background-image: url(images/analogphone.webp);
+  background-color: black;
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
   display: grid;
   grid-template-rows: 1fr 3fr;
+  background-color: rgb(148, 143, 143);
+  background-blend-mode: multiply;
 }
-#contact__header .message {
+#blog__header {
+  height: 70vh;
+  background-image: url(images/blog.webp);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  background-color: rgb(148, 143, 143);
+  background-blend-mode: multiply;
+  
+}
+#contact__header .message, #blog__header .message {
   display: flex;
   align-items: center;
   padding-left: 10%;
@@ -239,6 +253,10 @@ footer .social-links li {
   padding: 10px 20px;
 
   transition: all 0.3s ease 0s;
+  
+}
+footer .social-links li a {
+  color: #ffffff6e;
   cursor: pointer;
 }
 
@@ -259,22 +277,28 @@ footer .social-links li {
   color: #ffffff;
 }
 
+@media only screen and (min-width: 1000px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 1000px) {
   .card {
     grid-column-end: span 6;
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
   header nav {
     display: none;
   }
   main {
     gap: 20px;
   }
-  .card {
+  /* .card {
     grid-column-end: span 12;
-  }
+  } */
   .message h1 {
     font-size: 30px;
     line-height: 40px;
@@ -283,7 +307,7 @@ footer .social-links li {
     display: block;
     width: 40px;
     height: 40px;
-    margin: 10px;
+    margin: 0 10px;
     cursor: pointer;
     text-align: center;
     font-size: 30px;
@@ -302,8 +326,12 @@ footer .social-links li {
   }
   nav.active {
     display: block;
+    background-color: #000000;
     width: 100%;
   } 
+  .logo.active {
+    display: none;
+  }
   nav.active ul{
     display: block;
   } 
