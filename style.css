@@ -36,6 +36,7 @@ header {
 .nav__links li {
   display: inline-block;
   padding: 10px 20px;
+  text-align: center;
   transition: all 0.3s ease 0s;
 }
 
@@ -108,6 +109,10 @@ main {
 .card:hover {
   transform: translateY(-7px);
 }
+.card:hover .card__title{
+  color: orangered;
+  text-decoration: underline;
+}
 .card__image--container {
   width: 100%;
   padding-top: 67%;
@@ -127,8 +132,9 @@ main {
   padding: 10px; /*20px*/
 }
 .card__title {
-  margin-bottom: 10px; /*20px*/
+  margin-bottom: 5px; /*20px*/
   color: #000;
+  font-weight: 600;
 }
 
 /*---------------- start of contact page styles -----------------*/
@@ -326,7 +332,7 @@ footer .social-links li a {
   }
   nav.active {
     display: block;
-    background-color: #000000;
+    background-color: #1b1a1a;
     width: 100%;
   } 
   .logo.active {
